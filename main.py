@@ -5,7 +5,7 @@ import json
 
 def load_data():
     try:
-        with open('youtube.txt', 'r') as file:
+        with open('youtube_manager.json', 'r') as file:
             return json.load(file)
 
     except FileNotFoundError:
@@ -13,7 +13,7 @@ def load_data():
 
 
 def save_data_helper(videos):
-    with open('youtube.txt', 'w') as file:
+    with open('youtube_manager.json', 'w') as file:
         json.dump(videos, file)
 
 
